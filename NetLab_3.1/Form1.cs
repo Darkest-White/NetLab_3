@@ -135,7 +135,23 @@ namespace Lab3_1
 
         private void button8_Click(object sender, EventArgs e)
         {
+            double precision = (double)numericUpDown2.Value;
+            double sum = 0.0;
+            int n = 1;
+            textBox8.Clear();
 
+            while (true)
+            {
+                double term = 1.0 / n;
+                sum += term;
+                n++;
+
+                textBox8.AppendText($"{n - 1} step: {sum.ToString($"F{Math.Abs(Math.Log10(precision))}")}{Environment.NewLine}");
+                if (term < precision)
+                {
+                    break;
+                }
+            }
         } // WORK
 
         private void button9_Click(object sender, EventArgs e)
@@ -174,6 +190,14 @@ namespace Lab3_1
                 double fx = Math.Sin(x) / (Math.Abs(x) + 1);
                 textBox14.AppendText($"x={x:0.00};   f(x)={fx:0.00}\r\n");
             }
+        }
+
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+            numericUpDown2.Minimum = 0.00001M;
+            numericUpDown2.Maximum = 0.01M;
+            numericUpDown2.DecimalPlaces = 5;
+            //numericUpDown2.Increment = 0.000001M;
         }
     }
 }

@@ -312,7 +312,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(143, 148);
+            this.button8.Location = new System.Drawing.Point(203, 98);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 23);
             this.button8.TabIndex = 2;
@@ -323,11 +323,11 @@
             // numericUpDown2
             // 
             this.numericUpDown2.Increment = new decimal(new int[] {
-            1,
+            5,
             0,
             0,
-            393216});
-            this.numericUpDown2.Location = new System.Drawing.Point(172, 79);
+            131072});
+            this.numericUpDown2.Location = new System.Drawing.Point(177, 49);
             this.numericUpDown2.Maximum = new decimal(new int[] {
             1,
             0,
@@ -339,13 +339,14 @@
             0,
             393216});
             this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown2.Size = new System.Drawing.Size(174, 20);
             this.numericUpDown2.TabIndex = 1;
             this.numericUpDown2.Value = new decimal(new int[] {
             1,
             0,
             0,
             393216});
+            this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
             // textBox8
             // 
@@ -353,7 +354,7 @@
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
             this.textBox8.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
+            this.textBox8.Size = new System.Drawing.Size(146, 260);
             this.textBox8.TabIndex = 0;
             // 
             // tabPage6
